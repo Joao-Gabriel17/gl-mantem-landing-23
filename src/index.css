@@ -167,16 +167,19 @@ All colors MUST be HSL.
     isolation: isolate; /* permite z-index negativo atrás do texto */
   }
 
-  /* SUBLINHADO — largura exata da palavra "pontualidade" */
-  .hl-underline::after{
-    content:"";
-    position:absolute;
-    left:0; right:0;              /* largura da palavra */
-    bottom:-0.35em;               /* posicionado logo abaixo */
-    height:0.55em;                /* pincel mais espesso */
-    background:url("/textures/brush-underline.png") repeat-x center / auto 100%;
-    z-index:-1;
-    pointer-events:none;
+  /* PONTILHADO — efeito de texto pontilhado na palavra "pontualidade" */
+  .hl-dotted{
+    text-decoration: underline dotted 3px hsl(var(--primary));
+    text-underline-offset: 0.3em;
+    text-decoration-thickness: 3px;
+  }
+
+  /* SOMBREADO — efeito de sombra nas palavras */
+  .hl-shadow{
+    text-shadow: 
+      2px 2px 4px hsl(var(--primary) / 0.3),
+      4px 4px 8px hsl(var(--primary) / 0.2),
+      6px 6px 12px hsl(var(--primary) / 0.1);
   }
 
   /* MARCADORES — faixas atrás da palavra */
