@@ -9,9 +9,9 @@ All colors MUST be HSL.
 @layer base {
   :root {
     /* HVAC Brand Color Palette - Hex tokens (Light Theme) */
-    --primary-500: #FF7A00;
-    --primary-600: #E56E00;
-    --primary-700: #CC6200;
+    --primary-500: #dc9e15;
+    --primary-600: #c58f13;
+    --primary-700: #ad7f11;
     --bg-900: #FFFFFF;
     --bg-800: #F8F9FA;
     --surface-700: #F1F3F5;
@@ -33,10 +33,10 @@ All colors MUST be HSL.
     --text-100-hsl: 215 25% 12%;
     --text-300-hsl: 215 15% 35%;
 
-    /* Primary colors - Orange */
-    --primary: 18 100% 50%;
-    --primary-600-hsl: 18 100% 45%;
-    --primary-700-hsl: 18 100% 40%;
+    /* Primary colors - Gold */
+    --primary: 43 88% 47%;
+    --primary-600-hsl: 43 88% 42%;
+    --primary-700-hsl: 43 88% 37%;
     --primary-foreground: 0 0% 100%;
 
     /* Secondary & supporting */
@@ -57,33 +57,33 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 215 25% 12%;
 
-    --accent: 18 100% 96%;
-    --accent-foreground: 18 100% 35%;
+    --accent: 43 88% 96%;
+    --accent-foreground: 43 88% 35%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --ring: 18 100% 50%;
+    --ring: 43 88% 47%;
 
     --radius: 0.75rem;
 
     --sidebar-background: 0 0% 100%;
     --sidebar-foreground: 215 25% 12%;
-    --sidebar-primary: 18 100% 50%;
+    --sidebar-primary: 43 88% 47%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 210 17% 95%;
     --sidebar-accent-foreground: 215 25% 12%;
     --sidebar-border: 210 20% 88%;
-    --sidebar-ring: 18 100% 50%;
+    --sidebar-ring: 43 88% 47%;
   }
 
   :root {
     /* Gradient utilities */
-    --gradient-hero: linear-gradient(135deg, rgba(255, 122, 0, 0.06) 0%, rgba(229, 110, 0, 0) 60%);
-    --gradient-accent: linear-gradient(135deg, hsl(18 100% 50%) 0%, hsl(18 100% 55%) 100%);
+    --gradient-hero: linear-gradient(135deg, rgba(220, 158, 21, 0.06) 0%, rgba(197, 143, 19, 0) 60%);
+    --gradient-accent: linear-gradient(135deg, hsl(43 88% 47%) 0%, hsl(43 88% 52%) 100%);
 
     /* Shadows */
-    --shadow-glow: 0 0 40px hsl(18 100% 50% / 0.18);
+    --shadow-glow: 0 0 40px hsl(43 88% 47% / 0.18);
     --shadow-card: 0 6px 18px hsl(0 0% 0% / 0.3);
     --shadow-elevated: 0 20px 60px hsl(0 0% 0% / 0.4);
 
@@ -108,9 +108,9 @@ All colors MUST be HSL.
     --popover: 220 24% 18%;
     --popover-foreground: 216 30% 97%;
 
-    --primary: 18 100% 50%;
-    --primary-600: 18 100% 45%;
-    --primary-700: 18 100% 40%;
+    --primary: 43 88% 47%;
+    --primary-600: 43 88% 42%;
+    --primary-700: 43 88% 37%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 217 33% 25%;
@@ -128,16 +128,16 @@ All colors MUST be HSL.
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --ring: 18 100% 50%;
+    --ring: 43 88% 47%;
 
     --sidebar-background: 222 47% 11%;
     --sidebar-foreground: 216 30% 97%;
-    --sidebar-primary: 18 100% 50%;
+    --sidebar-primary: 43 88% 47%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 220 24% 18%;
     --sidebar-accent-foreground: 216 30% 97%;
     --sidebar-border: 216 17% 22%;
-    --sidebar-ring: 18 100% 50%;
+    --sidebar-ring: 43 88% 47%;
   }
 }
 
