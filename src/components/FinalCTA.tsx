@@ -12,25 +12,25 @@ export const FinalCTA = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-primary-500/5 via-transparent to-accent/5 -z-10" />
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <Card className="bg-surface-700/80 backdrop-blur-sm border-line-700 shadow-elevated overflow-hidden">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 p-10 md:p-16">
+        <Card className="bg-surface-700/80 backdrop-blur-sm border-line-700 shadow-elevated overflow-hidden rounded-3xl">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 p-8 sm:p-12 md:p-16 lg:p-20">
             {/* Left Column - Content */}
-            <div className="space-y-10 flex flex-col justify-center">
-              <div className="space-y-6 animate-fade-in-up">
-                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-textc-100 leading-tight">
+            <div className="space-y-10 md:space-y-12 flex flex-col justify-center">
+              <div className="space-y-6 md:space-y-8 animate-fade-in-up">
+                <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-textc-100 leading-tight">
                   Respire ar limpo hoje mesmo
                 </h2>
-                <p className="text-2xl text-textc-300 leading-relaxed">
+                <p className="text-xl sm:text-2xl md:text-3xl text-textc-300 leading-relaxed">
                   Atendimento rápido em Londrina e região. Orçamento sem compromisso em até 2 horas. Chegamos no horário combinado.
                 </p>
               </div>
 
               {/* CTAs */}
-              <div className="space-y-5 animate-fade-in" style={{ animationDelay: "200ms" }}>
+              <div className="space-y-4 md:space-y-5 animate-fade-in" style={{ animationDelay: "200ms" }}>
                 <Button
                   variant="hero"
                   size="xl"
-                  className="w-full justify-center"
+                  className="w-full justify-center text-base sm:text-lg shadow-elevated hover:shadow-glow"
                   asChild
                 >
                   <WhatsAppLink
@@ -49,7 +49,7 @@ export const FinalCTA = () => {
                 <Button
                   variant="hero-outline"
                   size="xl"
-                  className="w-full justify-center"
+                  className="w-full justify-center text-base sm:text-lg"
                   asChild
                 >
                   <WhatsAppLink
@@ -68,21 +68,21 @@ export const FinalCTA = () => {
               </div>
 
               {/* Trust Indicators */}
-              <div className="space-y-4 pt-6 animate-fade-in" style={{ animationDelay: "400ms" }}>
-                <div className="flex items-center gap-3 text-lg text-textc-300">
-                  <CheckCircle className="w-6 h-6 text-primary-500 flex-shrink-0" />
+              <div className="space-y-4 md:space-y-5 pt-6 md:pt-8 animate-fade-in" style={{ animationDelay: "400ms" }}>
+                <div className="flex items-center gap-3 md:gap-4 text-base md:text-lg text-textc-300">
+                  <CheckCircle className="w-6 h-6 md:w-7 md:h-7 text-primary-500 flex-shrink-0" />
                   <span>Atendemos hoje em Londrina, Cambé, Ibiporã e região</span>
                 </div>
-                <div className="flex items-center gap-3 text-lg text-textc-300">
-                  <CheckCircle className="w-6 h-6 text-primary-500 flex-shrink-0" />
+                <div className="flex items-center gap-3 md:gap-4 text-base md:text-lg text-textc-300">
+                  <CheckCircle className="w-6 h-6 md:w-7 md:h-7 text-primary-500 flex-shrink-0" />
                   <span>Orçamento grátis e sem compromisso</span>
                 </div>
-                <div className="flex items-center gap-3 text-lg text-textc-300">
-                  <CheckCircle className="w-6 h-6 text-primary-500 flex-shrink-0" />
+                <div className="flex items-center gap-3 md:gap-4 text-base md:text-lg text-textc-300">
+                  <CheckCircle className="w-6 h-6 md:w-7 md:h-7 text-primary-500 flex-shrink-0" />
                   <span>Equipe certificada NR10</span>
                 </div>
-                <div className="flex items-center gap-3 text-lg text-textc-300">
-                  <Clock className="w-6 h-6 text-primary-500 flex-shrink-0" />
+                <div className="flex items-center gap-3 md:gap-4 text-base md:text-lg text-textc-300">
+                  <Clock className="w-6 h-6 md:w-7 md:h-7 text-primary-500 flex-shrink-0" />
                   <span className="font-semibold text-textc-100">
                     Garantia de 90 dias
                   </span>
@@ -92,12 +92,12 @@ export const FinalCTA = () => {
 
             {/* Right Column - Mockup */}
             <div className="flex items-center justify-center lg:justify-end animate-fade-in" style={{ animationDelay: "300ms" }}>
-              <div className="relative max-w-sm w-full">
+              <div className="relative max-w-md w-full">
                 <img
                   src={whatsappHero}
                   alt="Atendimento WhatsApp G&L Manutenções - Resposta em até 30 minutos"
                   loading="lazy"
-                  className="w-full h-auto rounded-2xl shadow-elevated"
+                  className="w-full h-auto rounded-3xl shadow-elevated hover:shadow-glow transition-shadow duration-500"
                 />
               </div>
             </div>

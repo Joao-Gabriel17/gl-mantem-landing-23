@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Calendar, MessageCircle, Wrench, CheckCircle } from "lucide-react";
+import { AutoCarousel } from "./AutoCarousel";
 
 export const HowItWorks = () => {
   const steps = [
@@ -29,51 +30,53 @@ export const HowItWorks = () => {
     },
   ];
 
+  const stepCards = steps.map((item, index) => {
+    const Icon = item.icon;
+    return (
+      <Card
+        key={index}
+        className="relative p-8 md:p-10 bg-surface-700 border-line-700 hover:border-primary-500/30 hover:shadow-elevated transition-all duration-300 text-center space-y-6 h-full"
+      >
+        {/* Step Number Badge */}
+        <div className="absolute -top-4 -right-4 w-14 h-14 rounded-full bg-primary-500 text-white font-bold text-2xl flex items-center justify-center shadow-lg">
+          {item.step}
+        </div>
+
+        {/* Icon */}
+        <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary-500/10">
+          <Icon className="w-10 h-10 text-primary-500" />
+        </div>
+
+        {/* Content */}
+        <div className="space-y-3">
+          <h3 className="text-2xl font-bold text-textc-100">
+            {item.title}
+          </h3>
+          <p className="text-lg text-textc-300 leading-relaxed">
+            {item.description}
+          </p>
+        </div>
+      </Card>
+    );
+  });
+
   return (
-    <section id="how-it-works" className="py-24 md:py-32 bg-surface-700/30">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+    <section id="how-it-works" className="py-24 md:py-40 bg-surface-700/30">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
-          <h2 className="text-4xl md:text-5xl font-bold text-textc-100 mb-6">
+        <div className="text-center max-w-3xl mx-auto mb-20 md:mb-24 animate-fade-in-up">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-textc-100 mb-8">
             Como Funciona
           </h2>
-          <p className="text-xl text-textc-300">
+          <p className="text-xl md:text-2xl text-textc-300">
             Processo simples e transparente do orçamento até o pós-venda
           </p>
         </div>
 
-        {/* Steps Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-          {steps.map((item, index) => {
-            const Icon = item.icon;
-            return (
-              <Card
-                key={index}
-                className="relative p-8 bg-surface-700 border-line-700 hover:border-primary-500/30 transition-all duration-300 text-center space-y-4"
-              >
-                {/* Step Number Badge */}
-                <div className="absolute -top-4 -right-4 w-12 h-12 rounded-full bg-primary-500 text-white font-bold text-xl flex items-center justify-center shadow-lg">
-                  {item.step}
-                </div>
-
-                {/* Icon */}
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary-500/10">
-                  <Icon className="w-8 h-8 text-primary-500" />
-                </div>
-
-                {/* Content */}
-                <div className="space-y-2">
-                  <h3 className="text-xl font-bold text-textc-100">
-                    {item.title}
-                  </h3>
-                  <p className="text-base text-textc-300 leading-relaxed">
-                    {item.description}
-                  </p>
-                </div>
-              </Card>
-            );
-          })}
-        </div>
+        {/* Steps Carousel */}
+        <AutoCarousel autoplayDelay={4000}>
+          {stepCards}
+        </AutoCarousel>
       </div>
     </section>
   );

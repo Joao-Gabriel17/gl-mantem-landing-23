@@ -42,17 +42,17 @@ export const Testimonials = () => {
   const testimonialCards = testimonials.map((testimonial, index) => (
     <Card
       key={index}
-      className="p-8 bg-surface-700 border-line-700 hover:border-primary-500/30 hover:shadow-lg transition-all duration-300 h-full flex flex-col"
+      className="p-8 md:p-10 bg-surface-700 border-line-700 hover:border-primary-500/30 hover:shadow-elevated transition-all duration-500 h-full flex flex-col rounded-2xl"
     >
       {/* Rating Stars */}
       <div className="flex gap-1 mb-6">
         {[...Array(testimonial.rating)].map((_, i) => (
-          <Star key={i} className="w-5 h-5 fill-primary-500 text-primary-500" />
+          <Star key={i} className="w-5 h-5 md:w-6 md:h-6 fill-primary-500 text-primary-500" />
         ))}
       </div>
 
       {/* Testimonial Text */}
-      <p className="text-lg text-textc-300 mb-8 leading-relaxed flex-grow">
+      <p className="text-lg md:text-xl text-textc-300 mb-8 leading-relaxed flex-grow">
         "{testimonial.text}"
       </p>
 
@@ -62,13 +62,13 @@ export const Testimonials = () => {
           src={testimonial.avatar}
           alt={`${testimonial.name} - Cliente satisfeito G&L Manutenções`}
           loading="lazy"
-          className="w-14 h-14 rounded-full object-cover ring-2 ring-primary-500/20"
+          className="w-14 h-14 md:w-16 md:h-16 rounded-full object-cover ring-2 ring-primary-500/20"
         />
         <div>
-          <p className="font-semibold text-textc-100 text-base">
+          <p className="font-semibold text-textc-100 text-base md:text-lg">
             {testimonial.name}
           </p>
-          <p className="text-sm text-textc-300">
+          <p className="text-sm md:text-base text-textc-300">
             {testimonial.location}
           </p>
         </div>

@@ -34,19 +34,19 @@ export const WhyChoose = () => {
     return (
       <div
         key={index}
-        className="group text-center space-y-6 p-8 md:p-10 rounded-2xl bg-surface-700/50 border border-line-700 hover:border-primary-500/30 hover:bg-surface-700 transition-all duration-300 hover:shadow-lg h-full"
+        className="group text-center space-y-6 p-8 md:p-12 rounded-2xl bg-surface-700/50 border border-line-700 hover:border-primary-500/30 hover:bg-surface-700 hover:shadow-elevated transition-all duration-500 h-full"
       >
         {/* Icon */}
-        <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary-500/10 group-hover:bg-primary-500/20 transition-colors duration-300">
-          <Icon className="w-10 h-10 text-primary-500" />
+        <div className="inline-flex items-center justify-center w-20 h-20 md:w-24 md:h-24 rounded-full bg-primary-500/10 group-hover:bg-primary-500/20 transition-colors duration-500">
+          <Icon className="w-10 h-10 md:w-12 md:h-12 text-primary-500" />
         </div>
 
         {/* Content */}
-        <div className="space-y-3">
-          <h3 className="text-2xl font-bold text-textc-100">
+        <div className="space-y-4">
+          <h3 className="text-2xl md:text-3xl font-bold text-textc-100">
             {pillar.title}
           </h3>
-          <p className="text-lg text-textc-300 leading-relaxed">
+          <p className="text-lg md:text-xl text-textc-300 leading-relaxed">
             {pillar.description}
           </p>
         </div>

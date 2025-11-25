@@ -40,7 +40,7 @@ export const FAQ = () => {
   ];
 
   return (
-    <section id="faq" className="py-24 md:py-40">
+    <section id="faq" className="py-24 md:py-40 scroll-mt-24">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
         {/* Section Header */}
         <div className="text-center mb-20 md:mb-24 animate-fade-in-up">
@@ -54,19 +54,19 @@ export const FAQ = () => {
 
         {/* FAQ Accordion */}
         <div className="animate-fade-in">
-          <Accordion type="single" collapsible className="space-y-6">
+          <Accordion type="single" collapsible className="space-y-4 md:space-y-6">
             {faqs.map((faq, index) => (
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
-                className="bg-surface-700 border border-line-700 rounded-xl px-8 hover:border-primary-500/30 transition-colors duration-300"
+                className="bg-surface-700 border border-line-700 rounded-2xl px-6 md:px-8 hover:border-primary-500/30 hover:shadow-card transition-all duration-300"
               >
-                <AccordionTrigger className="text-left hover:no-underline py-8">
-                  <span className="text-xl font-semibold text-textc-100 pr-4">
+                <AccordionTrigger className="text-left hover:no-underline py-6 md:py-8">
+                  <span className="text-lg md:text-xl font-semibold text-textc-100 pr-4">
                     {faq.question}
                   </span>
                 </AccordionTrigger>
-                <AccordionContent className="text-lg text-textc-300 pb-8 leading-relaxed">
+                <AccordionContent className="text-base md:text-lg text-textc-300 pb-6 md:pb-8 leading-relaxed">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>

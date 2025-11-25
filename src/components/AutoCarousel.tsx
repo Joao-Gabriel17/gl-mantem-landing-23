@@ -18,9 +18,10 @@ export const AutoCarousel = ({
       loop: true,
       align: "start",
       skipSnaps: false,
-      dragFree: true,
+      dragFree: false,
+      containScroll: "trimSnaps",
     },
-    [Autoplay({ delay: autoplayDelay, stopOnInteraction: false })]
+    [Autoplay({ delay: autoplayDelay, stopOnInteraction: false, stopOnMouseEnter: true })]
   );
 
   const scrollPrev = useCallback(() => {
@@ -44,8 +45,8 @@ export const AutoCarousel = ({
   }, [emblaApi]);
 
   return (
-    <div className="relative">
-      <div className="overflow-hidden" ref={emblaRef}>
+    <div className="relative -mx-4 sm:-mx-6">
+      <div className="overflow-hidden px-4 sm:px-6" ref={emblaRef}>
         <div className={`flex ${className}`}>
           {children.map((child, index) => (
             <div

@@ -41,30 +41,30 @@ export const Features = () => {
     return (
       <Card
         key={index}
-        className="group overflow-hidden bg-surface-700 border-line-700 hover:border-primary-500/30 transition-all duration-300 hover:shadow-elevated h-full"
+        className="group overflow-hidden bg-surface-700 border-line-700 hover:border-primary-500/30 transition-all duration-500 hover:shadow-elevated h-full rounded-2xl"
       >
         {/* Feature Image */}
-        <div className="relative h-56 md:h-64 overflow-hidden">
+        <div className="relative h-64 md:h-72 overflow-hidden">
           <img
             src={feature.image}
             alt={`${feature.title} - Serviço profissional de climatização G&L Manutenções Londrina`}
             loading="lazy"
-            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent" />
           
           {/* Icon Badge */}
-          <div className="absolute top-6 right-6 w-14 h-14 rounded-full bg-primary/90 backdrop-blur-sm flex items-center justify-center shadow-lg">
-            <Icon className="w-7 h-7 text-primary-foreground" />
+          <div className="absolute top-6 right-6 w-16 h-16 rounded-full bg-primary/90 backdrop-blur-sm flex items-center justify-center shadow-lg">
+            <Icon className="w-8 h-8 text-primary-foreground" />
           </div>
         </div>
 
         {/* Feature Content */}
-        <div className="p-8 space-y-4">
-          <h3 className="text-2xl font-bold text-textc-100">
+        <div className="p-8 md:p-10 space-y-4">
+          <h3 className="text-2xl md:text-3xl font-bold text-textc-100">
             {feature.title}
           </h3>
-          <div className="text-lg text-textc-300 leading-relaxed whitespace-pre-line">
+          <div className="text-lg md:text-xl text-textc-300 leading-relaxed whitespace-pre-line">
             {feature.description}
           </div>
         </div>
@@ -86,12 +86,12 @@ export const Features = () => {
         </div>
 
         {/* Main Feature Card */}
-        <Card className="p-10 md:p-16 bg-gradient-to-br from-surface-700 to-surface-700/50 border-line-700 mb-12 md:mb-16 hover:shadow-elevated transition-all duration-300 animate-fade-in">
-          <div className="max-w-4xl mx-auto text-center space-y-6">
-            <h3 className="text-3xl md:text-4xl font-bold text-textc-100">
+        <Card className="p-10 sm:p-12 md:p-16 lg:p-20 bg-gradient-to-br from-surface-700 to-surface-700/50 border-line-700 mb-12 md:mb-16 hover:shadow-elevated hover:border-primary-500/20 transition-all duration-500 animate-fade-in rounded-3xl">
+          <div className="max-w-4xl mx-auto text-center space-y-6 md:space-y-8">
+            <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-textc-100">
               {mainFeature.title}
             </h3>
-            <p className="text-xl md:text-2xl text-textc-300 leading-relaxed">
+            <p className="text-xl sm:text-2xl md:text-3xl text-textc-300 leading-relaxed">
               {mainFeature.description}
             </p>
           </div>
