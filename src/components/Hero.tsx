@@ -4,6 +4,7 @@ import { Clock, Shield } from "lucide-react";
 import heroImage from "@/assets/hero-ac-install.jpg";
 import { trackEvent } from "@/lib/analytics";
 import { WhatsAppLink } from "@/components/WhatsAppLink";
+import { OptimizedImage } from "@/components/OptimizedImage";
 
 export const Hero = () => {
   return (
@@ -43,9 +44,15 @@ export const Hero = () => {
 
           <div className="relative animate-fade-in mt-12 lg:mt-0">
             <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-elevated">
-              <img src={heroImage} alt="Técnico instalando ar-condicionado split — G&L Manutenções em Londrina"
-                   loading="eager" fetchPriority="high" decoding="async" className="w-full h-auto object-cover"
-                   width={1280} height={853} />
+              <OptimizedImage 
+                src={heroImage} 
+                alt="Técnico instalando ar-condicionado split — G&L Manutenções em Londrina"
+                width={1280} 
+                height={853}
+                priority={true}
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="w-full h-auto object-cover"
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent" />
             </div>
           </div>

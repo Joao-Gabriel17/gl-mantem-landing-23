@@ -6,6 +6,7 @@ import avatar2 from "@/assets/avatar-2.jpg";
 import avatar3 from "@/assets/avatar-3.jpg";
 import avatar4 from "@/assets/avatar-4.jpg";
 import { AutoCarousel } from "./AutoCarousel";
+import { OptimizedImage } from "./OptimizedImage";
 
 export const Testimonials = () => {
   const testimonials = [
@@ -58,10 +59,12 @@ export const Testimonials = () => {
 
       {/* Author Info */}
       <div className="flex items-center gap-4 pt-6 border-t border-line-700">
-        <img
+        <OptimizedImage
           src={testimonial.avatar}
           alt={`${testimonial.name} - Cliente satisfeito G&L Manutenções`}
-          loading="lazy"
+          width={64}
+          height={64}
+          sizes="64px"
           className="w-14 h-14 md:w-16 md:h-16 rounded-full object-cover ring-2 ring-primary-500/20"
         />
         <div>
