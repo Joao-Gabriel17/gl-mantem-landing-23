@@ -7,12 +7,12 @@ import { WhatsAppLink } from "@/components/WhatsAppLink";
 
 export const FinalCTA = () => {
   return (
-    <section className="py-24 md:py-40 bg-gradient-to-b from-surface-700/20 to-bg-900 relative overflow-hidden">
+    <section className="py-24 md:py-40 bg-gradient-to-b from-surface-700/20 to-bg-900 relative">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary-500/5 via-transparent to-accent/5 -z-10" />
-      
+
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <Card className="bg-surface-700/80 backdrop-blur-sm border-line-700 shadow-elevated overflow-hidden rounded-3xl">
+        <Card className="bg-surface-700/80 backdrop-blur-sm border-line-700 shadow-elevated overflow-visible rounded-3xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 p-8 sm:p-12 md:p-16 lg:p-20">
             {/* Left Column - Content */}
             <div className="space-y-10 md:space-y-12 flex flex-col justify-center">
@@ -92,7 +92,7 @@ export const FinalCTA = () => {
 
             {/* Right Column - Mockup */}
             <div className="flex items-center justify-center lg:justify-end animate-fade-in" style={{ animationDelay: "300ms" }}>
-              <div className="relative max-w-md w-full overflow-hidden">
+              <div className="relative max-w-md w-full">
                 <img
                   src={whatsappHero}
                   alt="Atendimento WhatsApp G&L Manutenções - Resposta em até 30 minutos"
