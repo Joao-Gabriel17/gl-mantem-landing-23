@@ -110,7 +110,7 @@ export const Testimonials = () => {
             }}
           >
             <Star className="w-6 h-6 fill-primary-500 text-primary-500" />
-            4,9★ no Google • Ver todas as 32 avaliações →
+            4,9 ★ no Google • Ver todas as 32 avaliações →
           </a>
         </div>
       </div>
