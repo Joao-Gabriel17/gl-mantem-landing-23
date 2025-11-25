@@ -33,30 +33,31 @@ export const HowItWorks = () => {
   const stepCards = steps.map((item, index) => {
     const Icon = item.icon;
     return (
-      <Card
-        key={index}
-        className="relative p-8 md:p-10 bg-surface-700 border-line-700 hover:border-primary-500/30 hover:shadow-elevated transition-all duration-300 text-center space-y-6 h-full overflow-visible"
-      >
+      <div key={index} className="relative h-full overflow-visible">
         {/* Step Number Badge */}
-        <div className="absolute -top-5 -right-5 w-14 h-14 rounded-full bg-primary-500 text-white font-bold text-2xl flex items-center justify-center shadow-lg z-10">
+        <div className="absolute top-4 right-4 w-14 h-14 rounded-full bg-primary-500 text-white font-bold text-2xl flex items-center justify-center shadow-lg z-20">
           {item.step}
         </div>
 
-        {/* Icon */}
-        <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary-500/10">
-          <Icon className="w-10 h-10 text-primary-500" />
-        </div>
+        <Card
+          className="relative p-8 md:p-10 bg-surface-700 border-line-700 hover:border-primary-500/30 hover:shadow-elevated transition-all duration-300 text-center space-y-6 h-full overflow-hidden"
+        >
+          {/* Icon */}
+          <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary-500/10">
+            <Icon className="w-10 h-10 text-primary-500" />
+          </div>
 
-        {/* Content */}
-        <div className="space-y-3">
-          <h3 className="text-xl md:text-2xl font-bold text-textc-100">
-            {item.title}
-          </h3>
-          <p className="text-base md:text-lg text-textc-300 leading-relaxed">
-            {item.description}
-          </p>
-        </div>
-      </Card>
+          {/* Content */}
+          <div className="space-y-3">
+            <h3 className="text-xl md:text-2xl font-bold text-textc-100">
+              {item.title}
+            </h3>
+            <p className="text-base md:text-lg text-textc-300 leading-relaxed">
+              {item.description}
+            </p>
+          </div>
+        </Card>
+      </div>
     );
   });
 
