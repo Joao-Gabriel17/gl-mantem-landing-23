@@ -44,7 +44,7 @@ export const FinalCTA = () => {
                   >
                     <Phone className="w-5 h-5 shrink-0" />
                     <span className="min-w-0 whitespace-normal break-words leading-snug">
-                      Chamar no WhatsApp (43) 98491-0234
+                      Chamar no WhatsApp
                     </span>
                   </WhatsAppLink>
                 </Button>
