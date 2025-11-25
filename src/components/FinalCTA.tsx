@@ -30,7 +30,7 @@ export const FinalCTA = () => {
                 <Button
                   variant="hero"
                   size="xl"
-                  className="w-full justify-center text-base sm:text-lg shadow-elevated hover:shadow-glow flex-wrap whitespace-normal break-words text-center"
+                  className="w-full inline-flex items-center justify-center text-base sm:text-lg shadow-elevated hover:shadow-glow h-auto py-4 whitespace-normal break-words text-center"
                   asChild
                 >
                   <WhatsAppLink
@@ -42,14 +42,16 @@ export const FinalCTA = () => {
                       });
                     }}
                   >
-                    <Phone className="w-5 h-5 mr-2" />
-                    Chamar no WhatsApp (43) 98491-0234
+                    <Phone className="w-5 h-5 shrink-0" />
+                    <span className="min-w-0 whitespace-normal break-words leading-snug">
+                      Chamar no WhatsApp (43) 98491-0234
+                    </span>
                   </WhatsAppLink>
                 </Button>
                 <Button
                   variant="hero-outline"
                   size="xl"
-                  className="w-full justify-center text-base sm:text-lg flex-wrap whitespace-normal break-words text-center"
+                  className="w-full inline-flex items-center justify-center text-base sm:text-lg h-auto py-4 whitespace-normal break-words text-center"
                   asChild
                 >
                   <WhatsAppLink
@@ -62,7 +64,9 @@ export const FinalCTA = () => {
                       });
                     }}
                   >
-                    Agendar visita técnica gratuita
+                    <span className="min-w-0 whitespace-normal break-words leading-snug">
+                      Agendar visita técnica gratuita
+                    </span>
                   </WhatsAppLink>
                 </Button>
               </div>

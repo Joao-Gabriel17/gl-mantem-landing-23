@@ -11,6 +11,7 @@ export function WhatsAppLink({
   message = DEFAULT_WA_MSG,
   children,
   onClick,
+  className,
   target: _target,
   rel: _rel,
   href: _href,
@@ -33,6 +34,7 @@ export function WhatsAppLink({
   return (
     <a
       {...props}
+      className={className}
       href={href}
       target="_blank"
       rel="noopener noreferrer"
