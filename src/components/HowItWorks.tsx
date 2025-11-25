@@ -35,10 +35,10 @@ export const HowItWorks = () => {
     return (
       <Card
         key={index}
-        className="relative p-8 md:p-10 bg-surface-700 border-line-700 hover:border-primary-500/30 hover:shadow-elevated transition-all duration-300 text-center space-y-6 h-full"
+        className="relative p-8 md:p-10 bg-surface-700 border-line-700 hover:border-primary-500/30 hover:shadow-elevated transition-all duration-300 text-center space-y-6 h-full overflow-visible"
       >
         {/* Step Number Badge */}
-        <div className="absolute -top-4 -right-4 w-14 h-14 rounded-full bg-primary-500 text-white font-bold text-2xl flex items-center justify-center shadow-lg">
+        <div className="absolute -top-5 -right-5 w-14 h-14 rounded-full bg-primary-500 text-white font-bold text-2xl flex items-center justify-center shadow-lg z-10">
           {item.step}
         </div>
 
@@ -49,10 +49,10 @@ export const HowItWorks = () => {
 
         {/* Content */}
         <div className="space-y-3">
-          <h3 className="text-2xl font-bold text-textc-100">
+          <h3 className="text-xl md:text-2xl font-bold text-textc-100">
             {item.title}
           </h3>
-          <p className="text-lg text-textc-300 leading-relaxed">
+          <p className="text-base md:text-lg text-textc-300 leading-relaxed">
             {item.description}
           </p>
         </div>
@@ -65,18 +65,20 @@ export const HowItWorks = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-20 md:mb-24 animate-fade-in-up">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-textc-100 mb-8">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-textc-100 mb-8">
             Como Funciona
           </h2>
-          <p className="text-xl md:text-2xl text-textc-300">
+          <p className="text-lg md:text-xl text-textc-300">
             Processo simples e transparente do orçamento até o pós-venda
           </p>
         </div>
 
         {/* Steps Carousel */}
-        <AutoCarousel autoplayDelay={4000}>
-          {stepCards}
-        </AutoCarousel>
+        <div className="pt-6">
+          <AutoCarousel autoplayDelay={4000}>
+            {stepCards}
+          </AutoCarousel>
+        </div>
       </div>
     </section>
   );
