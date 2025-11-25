@@ -13,7 +13,7 @@ export const FinalCTA = () => {
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <Card className="bg-surface-700/80 backdrop-blur-sm border-line-700 shadow-elevated overflow-hidden rounded-3xl">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 p-8 sm:p-12 md:p-16 lg:p-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 p-8 sm:p-12 md:p-16 lg:p-20">
             {/* Left Column - Content */}
             <div className="space-y-10 md:space-y-12 flex flex-col justify-center">
               <div className="space-y-6 md:space-y-8 animate-fade-in-up">
@@ -30,7 +30,7 @@ export const FinalCTA = () => {
                 <Button
                   variant="hero"
                   size="xl"
-                  className="w-full justify-center text-base sm:text-lg shadow-elevated hover:shadow-glow"
+                  className="w-full justify-center text-base sm:text-lg shadow-elevated hover:shadow-glow flex-wrap whitespace-normal break-words text-center"
                   asChild
                 >
                   <WhatsAppLink
@@ -49,7 +49,7 @@ export const FinalCTA = () => {
                 <Button
                   variant="hero-outline"
                   size="xl"
-                  className="w-full justify-center text-base sm:text-lg"
+                  className="w-full justify-center text-base sm:text-lg flex-wrap whitespace-normal break-words text-center"
                   asChild
                 >
                   <WhatsAppLink
@@ -92,7 +92,7 @@ export const FinalCTA = () => {
 
             {/* Right Column - Mockup */}
             <div className="flex items-center justify-center lg:justify-end animate-fade-in" style={{ animationDelay: "300ms" }}>
-              <div className="relative max-w-md w-full">
+              <div className="relative max-w-md w-full overflow-hidden">
                 <img
                   src={whatsappHero}
                   alt="Atendimento WhatsApp G&L Manutenções - Resposta em até 30 minutos"
