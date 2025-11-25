@@ -21,8 +21,8 @@ export const Hero = () => {
               Ar-condicionado instalado com{" "}
               <span className="hl hl-dotted">pontualidade</span>{" "}
               e{" "}
-              <span className="hl hl-marker hl-marker--v1 hl-shadow">acabamento</span>{" "}
-              <span className="hl hl-marker hl-marker--v2 hl-shadow">impecável</span>
+              <span className="hl hl-marker hl-marker--v1">acabamento</span>{" "}
+              <span className="hl hl-marker hl-marker--v2">impecável</span>
             </h1>
 
             <p className="text-lg sm:text-xl md:text-2xl text-textc-300 leading-relaxed max-w-2xl">

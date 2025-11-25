@@ -169,9 +169,8 @@ All colors MUST be HSL.
 
   /* PONTILHADO — efeito de texto pontilhado na palavra "pontualidade" */
   .hl-dotted{
-    text-decoration: underline dotted 3px hsl(var(--primary));
-    text-underline-offset: 0.3em;
-    text-decoration-thickness: 3px;
+    color: hsl(var(--primary));
+    font-weight: 800;
   }
 
   /* SOMBREADO — efeito de sombra nas palavras */
