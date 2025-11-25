@@ -4,6 +4,7 @@ import cleanAirImage from "@/assets/clean-air-health.jpg";
 import professionalInstallImage from "@/assets/professional-install.jpg";
 import maintenanceImage from "@/assets/maintenance-service.jpg";
 import { AutoCarousel } from "./AutoCarousel";
+import { OptimizedImage } from "./OptimizedImage";
 
 export const Features = () => {
   const mainFeature = {
@@ -45,10 +46,12 @@ export const Features = () => {
       >
         {/* Feature Image */}
         <div className="relative h-64 md:h-72 overflow-hidden">
-          <img
+          <OptimizedImage
             src={feature.image}
             alt={`${feature.title} - Serviço profissional de climatização G&L Manutenções Londrina`}
-            loading="lazy"
+            width={800}
+            height={600}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent" />
