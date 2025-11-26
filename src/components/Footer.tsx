@@ -46,16 +46,6 @@ export const Footer = () => {
                 <Phone className="w-5 h-5 text-primary-500 flex-shrink-0" />
                 (43) 98491-0234
               </WhatsAppLink>
-              
-              <div className="pt-2 space-y-2">
-                <p className="text-textc-100 font-semibold text-sm uppercase tracking-wide">
-                  Cidades Atendidas
-                </p>
-                <div className="text-textc-300 leading-relaxed space-y-1">
-                  <p>Londrina • Cambé • Ibiporã</p>
-                  <p>Rolândia • Arapongas</p>
-                </div>
-              </div>
             </div>
           </div>
 
