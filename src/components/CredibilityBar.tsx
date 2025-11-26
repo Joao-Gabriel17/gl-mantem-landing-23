@@ -6,7 +6,7 @@ export const CredibilityBar = () => {
     {
       icon: Star,
       title: "Avaliações Google",
-      value: "4,9★ / 32 reviews",
+      value: "4,9 ★ / 32 reviews",
     },
     {
       icon: Shield,
