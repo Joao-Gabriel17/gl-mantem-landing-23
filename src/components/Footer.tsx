@@ -12,7 +12,7 @@ export const Footer = () => {
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         {/* Logo e Tagline - Centralizado e Destacado */}
         <div className="flex flex-col items-center text-center pt-12 md:pt-16 pb-8 md:pb-12">
-          <div className="mb-6 animate-fade-in">
+          <div className="mb-4 animate-fade-in">
             <img 
               src={logoImage} 
               alt="G&L Manutenções" 
