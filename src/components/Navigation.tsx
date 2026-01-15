@@ -24,7 +24,7 @@ export const Navigation = () => {
             <img 
               src={logoImage} 
               alt="G&L Manutenções" 
-              className="w-[220px] min-w-[200px] max-w-[240px] md:w-[300px] md:min-w-[280px] md:max-w-[340px] h-auto" 
+              className="w-[180px] max-w-[200px] md:w-[240px] md:max-w-[260px] h-auto" 
             />
           </a>
 
