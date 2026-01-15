@@ -16,7 +16,7 @@ export const Footer = () => {
             <img 
               src={logoImage} 
               alt="G&L Manutenções" 
-              className="h-20 md:h-28 lg:h-32 w-auto transition-all duration-300 hover:scale-105 drop-shadow-lg" 
+              className="w-[140px] max-w-[160px] md:w-[180px] md:max-w-[200px] h-auto transition-all duration-300 hover:scale-105 drop-shadow-lg" 
             />
           </div>
           <p className="text-base md:text-lg text-textc-200 font-medium max-w-md animate-fade-in">

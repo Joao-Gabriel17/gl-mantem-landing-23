@@ -20,7 +20,7 @@ export const FAQ = () => {
     {
       question: "Vocês atendem onde e em quanto tempo?",
       answer:
-        "Londrina, Cambé, Ibiporã, Rolândia, Arapongas e região. Agendamento rápido - geralmente atendemos em 24-48h. Chegamos no horário combinado (sem aquela janela de 4 horas).",
+        "Atendemos Londrina e região com rapidez. O orçamento é sem compromisso e enviado em até 2 horas. Comparecemos sempre no horário combinado.",
     },
     {
       question: "Tem garantia? Quais formas de pagamento?",
