@@ -1,4 +1,4 @@
-import { Instagram, Phone } from "lucide-react";
+import { Instagram, Phone, Mail, Clock, Facebook } from "lucide-react";
 import { trackEvent } from "@/lib/analytics";
 import { WhatsAppLink } from "@/components/WhatsAppLink";
 import logoImage from "@/assets/logo.png";
@@ -31,9 +31,9 @@ export const Footer = () => {
             <h3 className="font-bold text-lg md:text-xl text-textc-100 mb-4 flex items-center justify-center md:justify-start gap-2">
               Fale Conosco
             </h3>
-            <div className="space-y-4">
+            <div className="space-y-3">
               <WhatsAppLink
-                className="inline-flex items-center gap-3 text-textc-200 hover:text-primary-400 focus:text-primary-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 rounded-lg px-4 py-3 transition-all duration-300 hover:bg-primary-500/10 font-medium"
+                className="inline-flex items-center gap-3 text-textc-200 hover:text-primary-400 focus:text-primary-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 rounded-lg px-4 py-2.5 transition-all duration-300 hover:bg-primary-500/10 font-medium"
                 onClick={() => {
                   trackEvent("click_phone_footer", {
                     event_category: "engagement",
@@ -43,8 +43,22 @@ export const Footer = () => {
                 }}
               >
                 <Phone className="w-5 h-5 text-primary-500 flex-shrink-0" />
-                (43) 98491-0234
+                (43) 99168-5885
               </WhatsAppLink>
+              <a
+                href="mailto:glplacaseletronicas@gmail.com"
+                className="inline-flex items-center gap-3 text-textc-200 hover:text-primary-400 focus:text-primary-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 rounded-lg px-4 py-2.5 transition-all duration-300 hover:bg-primary-500/10 font-medium"
+              >
+                <Mail className="w-5 h-5 text-primary-500 flex-shrink-0" />
+                glplacaseletronicas@gmail.com
+              </a>
+              <div className="flex items-start gap-3 text-textc-300 px-4 py-2.5">
+                <Clock className="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" />
+                <div className="text-sm">
+                  <p>Seg a Sex: 08:00 às 18:00</p>
+                  <p>Sábado: 08:00 às 12:00</p>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -96,6 +110,15 @@ export const Footer = () => {
                   aria-label="Instagram"
                 >
                   <Instagram className="w-6 h-6 text-primary-400 group-hover:text-primary-300 transition-colors" />
+                </a>
+                <a
+                  href="https://www.facebook.com/profile.php?id=61581539174971"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group w-14 h-14 rounded-xl bg-gradient-to-br from-primary-500/20 to-primary-600/10 flex items-center justify-center hover:from-primary-500/30 hover:to-primary-600/20 hover:scale-110 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 focus-visible:ring-offset-bg-900 transition-all duration-300 shadow-lg hover:shadow-primary-500/20"
+                  aria-label="Facebook"
+                >
+                  <Facebook className="w-6 h-6 text-primary-400 group-hover:text-primary-300 transition-colors" />
                 </a>
               </div>
               <p className="text-sm text-textc-400 italic">
