@@ -1,4 +1,4 @@
-export const WHATSAPP_PRIMARY = "5543984910234";
+export const WHATSAPP_PRIMARY = "5543991685885";
 export const DEFAULT_WA_MSG =
   "Olá! Vim pelo site da G&L Manutenções e gostaria de um orçamento.";
 
