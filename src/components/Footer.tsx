@@ -20,7 +20,8 @@ export const Footer = () => {
             />
           </div>
           <p className="text-base md:text-lg text-textc-200 font-medium max-w-md animate-fade-in">
-            Climatização de confiança em Londrina e região
+            Valores que viram confiança.<br />
+            E confiança que vira parceria!
           </p>
         </div>
 
