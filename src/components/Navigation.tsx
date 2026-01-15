@@ -21,7 +21,11 @@ export const Navigation = () => {
         <div className="flex items-center justify-between h-24 md:h-28">
           {/* Logo */}
           <a href="#" className="flex items-center transition-transform duration-300 hover:scale-105">
-            <img src={logoImage} alt="G&L Manutenções" className="h-20 md:h-24 lg:h-28 w-auto" />
+            <img 
+              src={logoImage} 
+              alt="G&L Manutenções" 
+              className="w-[220px] min-w-[200px] max-w-[240px] md:w-[300px] md:min-w-[280px] md:max-w-[340px] h-auto" 
+            />
           </a>
 
           {/* Desktop Navigation */}
