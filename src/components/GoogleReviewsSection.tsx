@@ -227,14 +227,8 @@ export const GoogleReviewsSection = () => {
             </div>
           </div>
 
-          {/* Desktop Grid / Mobile Carousel */}
-          <div className="hidden lg:grid lg:grid-cols-2 gap-6 mb-12">
-            {reviewCards}
-          </div>
-
-          <div className="lg:hidden">
-            <AutoCarousel autoplayDelay={5000}>{reviewCards}</AutoCarousel>
-          </div>
+          {/* Carousel for all screen sizes */}
+          <AutoCarousel autoplayDelay={5000}>{reviewCards}</AutoCarousel>
 
           {/* Attribution */}
           <div className="text-center mt-10 mb-8">
