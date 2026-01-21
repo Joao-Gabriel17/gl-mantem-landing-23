@@ -11,6 +11,7 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { AutoCarousel } from "./AutoCarousel";
+import { supabase } from "@/integrations/supabase/client";
 
 interface Review {
   author: string;
@@ -40,15 +41,32 @@ export const GoogleReviewsSection = () => {
   useEffect(() => {
     const fetchReviews = async () => {
       try {
-        const response = await fetch(
-          "https://reviews-api-glmanutencao.vercel.app/api/reviews?limit=4"
+        setLoading(true);
+        setError(false);
+        
+        // Use Edge Function to avoid CORS issues
+        const { data: reviewsData, error: fetchError } = await supabase.functions.invoke(
+          'google-reviews',
+          {
+            body: {},
+          }
         );
-        if (!response.ok) throw new Error("Failed to fetch reviews");
-        const reviewsData = await response.json();
-        setData(reviewsData);
+
+        if (fetchError) {
+          console.error("Error from edge function:", fetchError);
+          throw new Error("Failed to fetch reviews");
+        }
+
+        if (reviewsData && reviewsData.reviews && reviewsData.reviews.length > 0) {
+          setData(reviewsData);
+          setError(false);
+        } else {
+          throw new Error("No reviews data received");
+        }
       } catch (err) {
         console.error("Error fetching Google reviews:", err);
         setError(true);
+        setData(null);
       } finally {
         setLoading(false);
       }
