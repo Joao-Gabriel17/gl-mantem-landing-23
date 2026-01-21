@@ -11,7 +11,7 @@ export const Navigation = () => {
     { id: "services", label: "Serviços", href: "#features" },
     { id: "why-choose", label: "Diferenciais", href: "#why-choose" },
     { id: "how-it-works", label: "Como Funciona", href: "#how-it-works" },
-    { id: "testimonials", label: "Depoimentos", href: "#testimonials" },
+    { id: "avaliacoes", label: "Avaliações", href: "#avaliacoes" },
     { id: "faq", label: "FAQs", href: "#faq" },
   ];
 
