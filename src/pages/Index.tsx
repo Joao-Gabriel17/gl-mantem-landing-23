@@ -5,6 +5,7 @@ import { Features } from "@/components/Features";
 import { WhyChoose } from "@/components/WhyChoose";
 import { HowItWorks } from "@/components/HowItWorks";
 import { Testimonials } from "@/components/Testimonials";
+import { GoogleReviewsSection } from "@/components/GoogleReviewsSection";
 import { FAQ } from "@/components/FAQ";
 import { FinalCTA } from "@/components/FinalCTA";
 import { Footer } from "@/components/Footer";
@@ -73,6 +74,7 @@ const Index = () => {
       <WhyChoose />
       <HowItWorks />
       <Testimonials />
+      <GoogleReviewsSection />
       <FAQ />
       <FinalCTA />
       <Footer />
