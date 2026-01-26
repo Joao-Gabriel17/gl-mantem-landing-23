@@ -20,13 +20,17 @@ export const Navigation = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-24 md:h-28">
           {/* Logo */}
-          <a href="#" className="flex items-center transition-transform duration-300 hover:scale-105">
+          <button
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            className="flex items-center transition-transform duration-300 hover:scale-105 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 rounded-lg"
+            aria-label="Voltar ao topo"
+          >
             <img 
               src={logoImage} 
               alt="G&L Manutenções" 
               className="w-[180px] max-w-[200px] md:w-[240px] md:max-w-[260px] h-auto" 
             />
-          </a>
+          </button>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
