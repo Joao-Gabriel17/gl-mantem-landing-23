@@ -1,13 +1,8 @@
-import { Star, Shield, Zap, Clock, CheckCircle } from "lucide-react";
+import { Shield, Zap, Clock, CheckCircle } from "lucide-react";
 import { AutoCarousel } from "./AutoCarousel";
 
 export const CredibilityBar = () => {
   const credentials = [
-    {
-      icon: Star,
-      title: "Avaliações Google",
-      value: "4,9★ / 32 reviews",
-    },
     {
       icon: Shield,
       title: "Garantia de serviço",

@@ -199,12 +199,39 @@ export const GoogleReviewsSection = () => {
     <>
       <section id="avaliacoes" className="py-24 md:py-40 bg-bg-900">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-          {/* Section Header */}
+        {/* Section Header */}
           <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16 animate-fade-in-up">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-textc-100 mb-6">
               Avaliações do Google
             </h2>
+          </div>
 
+          {/* Carousel for all screen sizes */}
+          <AutoCarousel autoplayDelay={5000}>{reviewCards}</AutoCarousel>
+
+          {/* Unified Rating Block - Below carousel */}
+          <div className="text-center mt-10 mb-8">
+            {/* Rating Stars + Average + Count */}
+            <div className="flex items-center justify-center gap-2 text-xl md:text-2xl mb-3">
+              <div className="flex gap-0.5">
+                {[...Array(5)].map((_, i) => (
+                  <Star
+                    key={i}
+                    className={`w-6 h-6 md:w-7 md:h-7 ${
+                      i < Math.floor(data.rating)
+                        ? "fill-primary-500 text-primary-500"
+                        : "fill-surface-600 text-surface-600"
+                    }`}
+                  />
+                ))}
+              </div>
+              <span className="text-textc-100 font-bold">{data.rating}</span>
+              <span className="text-textc-300">•</span>
+              <span className="text-textc-300">
+                {data.total_reviews} avaliações
+              </span>
+            </div>
+            
             {/* Trust Microcopy */}
             <p className="text-sm text-textc-300/70 flex items-center justify-center gap-1.5">
               <svg
@@ -232,30 +259,6 @@ export const GoogleReviewsSection = () => {
               </svg>
               Avaliações verificadas no Google • Atualizadas automaticamente
             </p>
-          </div>
-
-          {/* Carousel for all screen sizes */}
-          <AutoCarousel autoplayDelay={5000}>{reviewCards}</AutoCarousel>
-
-          {/* Rating Summary - Moved below carousel */}
-          <div className="flex items-center justify-center gap-2 text-xl md:text-2xl mt-10 mb-8">
-            <div className="flex gap-0.5">
-              {[...Array(5)].map((_, i) => (
-                <Star
-                  key={i}
-                  className={`w-6 h-6 md:w-7 md:h-7 ${
-                    i < Math.floor(data.rating)
-                      ? "fill-primary-500 text-primary-500"
-                      : "fill-surface-600 text-surface-600"
-                  }`}
-                />
-              ))}
-            </div>
-            <span className="text-textc-100 font-bold">{data.rating}</span>
-            <span className="text-textc-300">•</span>
-            <span className="text-textc-300">
-              {data.total_reviews} avaliações
-            </span>
           </div>
 
           {/* CTA Button */}
